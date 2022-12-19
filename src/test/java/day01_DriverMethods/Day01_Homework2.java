@@ -71,3 +71,34 @@ public class Day01_Homework2 {
        System.out.println("TEST FAILED");
    }
  */
+
+/*
+// Sayfanin sizin istediginiz konum ve boyuta geldigini test edin
+Point point = driver.manage().window().getPosition();
+System.out.println(point);
+if (point.equals(point)) {
+    System.out.println("Browser konumu PASSED");
+} else {
+    System.out.println("Browser konumu FAILED");
+}
+Dimension dimension = driver.manage().window().getSize();
+System.out.println(dimension);
+if (dimension.equals(dimension)) {
+    System.out.println("Browser boyutu PASSED");
+} else {
+    System.out.println("Browser boyutu FAILED");
+}
+ */
+
+/*
+ //Sayfanin sizin istediginiz konum ve boyuta geldigini test edin
+        int genislik = driver.manage().window().getSize().width;
+        int yukseklik = driver.manage().window().getSize().height;
+        int x =driver.manage().window().getPosition().x;
+        int y =driver.manage().window().getPosition().y;
+        if (genislik==800&&yukseklik==600&&x==80&&y==0){
+            System.out.println("Width and Height test PASSED");
+        }else{
+            System.out.println("Width and Height test PASSED");
+        }
+ */
