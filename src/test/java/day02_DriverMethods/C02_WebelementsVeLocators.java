@@ -40,6 +40,8 @@ public class C02_WebelementsVeLocators {
         System.out.println("Link Sayisi= "+linklerList.size());
 
         //linklerList.stream().forEach(t-> System.out.println(t.getText()));
+
+
         for (WebElement w:linklerList){
             System.out.println(w.getText());
         }

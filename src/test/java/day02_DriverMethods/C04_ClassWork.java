@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
+import java.util.Arrays;
+import java.util.List;
 
 public class C04_ClassWork {
     public static void main(String[] args) {
@@ -21,10 +23,21 @@ public class C04_ClassWork {
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys("city bike", Keys.ENTER);
 
         //Amazon'da görüntülenen ilgili sonuçların sayısını yazdırın
-        WebElement aramaSonucYazisi = driver.findElement(By.className("sg-col-inner"));
-        System.out.println(aramaSonucYazisi.getText());
+        List<WebElement>aramaSonucYazisi = driver.findElements(By.className("sg-col-inner"));
+        System.out.println("Arama Sonuc Yazisi : "+aramaSonucYazisi.get(0).getText());
+
+        //Arama sonuc sayisini konsola yazdirin.
+        String []sonucSayisi = aramaSonucYazisi.get(0).getText().split(" ");
+        System.out.println("Sonuc Sayisi : "+sonucSayisi[2]);
+
+        //Sonuc sayisini Lambda ile yazdiriniz.
+
+        //System.out.println(Arrays.stream(sayi).findFirst());
+        Arrays.stream(aramaSonucYazisi.get(0).getText().split(" ")).limit(3).skip(2).forEach(System.out::println);
 
         //Sonra karşınıza çıkan ilk sonucun resmine tıklayın.
+        List<WebElement>ilkWE = driver.findElements(By.className("s-image"));
+        ilkWE.get(0).click();
     }
 }
 /*

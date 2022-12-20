@@ -19,42 +19,42 @@ public class Day01_Homework2 {
                 "Sayfanin Boyutu: "+driver.manage().window().getSize());
 
         //Sayfanin konumunu ve boyutunu istediginiz sekilde ayarlayin
-//        driver.manage().window().setSize(new Dimension(10,12));
-//        driver.manage().window().setPosition(new Point(1000,1000));
-//
-        Point p= new Point(10,12);//Konum
-        System.out.println("Sayfanin Yeni Konum Degerleri = " +"("+ p.x+","+p.y+")");
+
+        Point konum= new Point(10,12);//Konum
+        System.out.println("Sayfanin Yeni Konum Degerleri = " +"("+ konum.x+","+konum.y+")");
 
 
-        Dimension d =new Dimension(1000,875);//Boyut
-        System.out.println("Sayfanin yeni boyutlari = " + "("+d.width+","+d.height+")");
+        Dimension size =new Dimension(1000,875);//Boyut
+        System.out.println("Sayfanin yeni boyutlari = " + "("+size.width+","+size.height+")");
+
+
 
 
         Thread.sleep(3000);
-        driver.manage().window().setPosition(p);
+        driver.manage().window().setPosition(konum);
         Thread.sleep(3000);
-        driver.manage().window().setSize(d);
+        driver.manage().window().setSize(size);
 
         //Sayfanin sizin istediginiz konum ve boyuta geldigini test edin
 
 
-        if(d.width==1000 && d.height==875){
-            System.out.println("Konum Testi PASSED");
-        }else{
-            System.out.println("Konum Testi FAILED");
-        }
-
-        if(p.x==10 && p.y==12){
+        if(size.width==1000 && size.height==875){
             System.out.println("Boyut Testi PASSED");
         }else{
             System.out.println("Boyut Testi FAILED");
+        }
+
+        if(konum.x==10 && konum.y==12){
+            System.out.println("Konum Testi PASSED");
+        }else{
+            System.out.println("Konum Testi FAILED");
         }
         System.out.println("Son Konum Degerleri: "+driver.manage().window().getPosition());
 
         System.out.println("Son Boyut Degerleri: "+driver.manage().window().getSize());
 
         //Sayfayi kapatin
-        driver.quit();
+        driver.close();
     }
 }
 
