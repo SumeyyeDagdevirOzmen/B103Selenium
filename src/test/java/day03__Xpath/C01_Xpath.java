@@ -21,7 +21,11 @@ public class C01_Xpath {
 
 //        2 - Add Element butonuna basin
         Thread.sleep(3000);
-        driver.findElement(By.xpath("//*[@onclick='addElement()']")).click();
+        //WebElement addButton = driver.findElement(By.xpath("//*[@onclick='addElement()']"));
+        //<button onclick="addElement()">Add Element</button>
+        WebElement addButtonT = driver.findElement(By.xpath("//*[text()='Add Element']"));
+        //Xpath kullaniminda locate edecegimiz webelement text'e sahipse yukaridaki sekilde kullanabiliriz.
+        addButtonT.click();
 
 //        3 Delete butonu’nun gorunur oldugunu test edin
 
@@ -32,7 +36,14 @@ public class C01_Xpath {
 
 
 //        4 Delete tusuna basin
+        Thread.sleep(3000);
+        deleteButonu.click();
+
 //        5 “Add / Remove Elements”yazisinin gorunur oldugunu test edin
+        WebElement addRemoveEYazisi = driver.findElement(By.xpath("//h3"));
+        if(addRemoveEYazisi.isDisplayed()){
+            System.out.println("Test PASSED");
+        }else System.out.println("Test FAILED");
     }
 }
 /*
