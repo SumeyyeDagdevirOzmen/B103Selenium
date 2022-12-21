@@ -27,7 +27,7 @@ public class C01_Xpath {
         //Xpath kullaniminda locate edecegimiz webelement text'e sahipse yukaridaki sekilde kullanabiliriz.
         addButtonT.click();
 
-//        3 Delete butonu’nun gorunur oldugunu test edin
+//        3- Delete butonu’nun gorunur oldugunu test edin
 
        WebElement deleteButonu=  driver.findElement(By.xpath("//*[@onclick='deleteElement()']"));
        if(deleteButonu.isDisplayed()){//Bir web elementin gorunur olup olmadigini isDisplayed() methodu ile bakariz.
@@ -46,6 +46,23 @@ public class C01_Xpath {
         }else System.out.println("Test FAILED");
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 //https://the-internet.herokuapp.com/add_remove_elements/ adresine gidin
 driver.get("https://the-internet.herokuapp.com/add_remove_elements/");

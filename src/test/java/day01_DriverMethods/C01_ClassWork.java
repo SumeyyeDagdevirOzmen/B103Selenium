@@ -3,7 +3,7 @@ package day01_DriverMethods;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Day01_ClassWork {
+public class C01_ClassWork {
     /*
     Yeni bir package olusturalim : day01
     Yeni bir class olusturalim : C03_GetMethods

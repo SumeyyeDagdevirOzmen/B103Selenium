@@ -31,6 +31,13 @@ public class C02_CssSelector {
             System.out.println("Title testi PASSED");
         }else System.out.println("Title testi FAILED");
 
+        String actualTitle2=driver.getTitle();
+        String expectedKelime="Smile more";
+        if(actualTitle2.contains(expectedKelime)){
+            System.out.println("Test2 PASSED");
+        }else System.out.println("Test2 FAILED");
+
+
         //6-Gift Cards sekmesine basin
         driver.findElement(By.cssSelector("a[href='/gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc']")).click();
 
@@ -38,6 +45,7 @@ public class C02_CssSelector {
         driver.findElement(By.cssSelector("img[alt='Birthday']")).click();
 
         //8- Best Seller bolumunden ilk urunu tiklayin
+        //a[text()='Gift Cards']
         List<WebElement> bestSellerBolumu = driver.findElements(By.cssSelector("img[alt='Amazon.com eGift Card']"));
         bestSellerBolumu.get(0).click();
 
@@ -46,49 +54,35 @@ public class C02_CssSelector {
 
         //10-Urun ucretinin 25$ oldugunu test edin
         WebElement urunUcreti = driver.findElement(By.cssSelector("span[id='gc-live-preview-amount']"));
-        if(urunUcreti.getText().equals("25$.00")){
+        if(urunUcreti.getText().equals("$25.00")){
             System.out.println("Test PASSED");
         }else System.out.println("Test FAILED");
 
 
         //10-Sayfayi kapatin
-        driver.close();
-
-        /*
-        /*
--Amazon sayfasına gidiniz
--Arama kutusunu locate ediniz
--Arama kutusunun tagName'inin input olduğunu test ediniz
--Arama kutusunun name atributu'nun değerinin field-keywords olduğunu test ediniz
--Sayfayı kapatınız
- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+       driver.close();
 
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 driver.get("https://www.amazon.com/");
 driver.navigate().refresh();
