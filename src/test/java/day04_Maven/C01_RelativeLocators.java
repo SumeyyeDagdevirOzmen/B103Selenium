@@ -21,7 +21,7 @@ public class C01_RelativeLocators {
         //Sayfadaki Berlin Webelement'ini relative locator ile tiklayin//Burada onemli olan tagname 'lerinin ayni olmasi
         WebElement NYCWebElement = driver.findElement(By.xpath("//*[@id='pid3_thumb']"));
         WebElement BayAreaWebElement = driver.findElement(By.cssSelector("img[id='pid8_thumb']"));
-        WebElement BerlinWebE = driver.findElement(with(By.tagName("li")).below(NYCWebElement).toLeftOf(BayAreaWebElement));
+        WebElement BerlinWebE = driver.findElement(with(By.className("ui-li-has-thumb")).below(NYCWebElement).toLeftOf(BayAreaWebElement));
         BerlinWebE.click();
 
 
