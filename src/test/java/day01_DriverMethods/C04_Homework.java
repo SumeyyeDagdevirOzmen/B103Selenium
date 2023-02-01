@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class Day01_Homework {
+public class C04_Homework {
 
     /*
     Youtube ana sayfasina gidelim . https://www.youtube.com/
